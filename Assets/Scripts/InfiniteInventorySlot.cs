@@ -50,6 +50,8 @@ public class InfiniteInventorySlot : MonoBehaviour
     {
         if(slotItem != null)
         {
+            deleteButton.onClick.RemoveAllListeners();
+
             closeButton.onClick.AddListener(CloseWindow);
             deleteButton.onClick.AddListener(DeleteItem);
 
