@@ -72,12 +72,10 @@ public class InfiniteInventorySlot : MonoBehaviour
 
     void DeleteItem()
     {
-        InventoryManager.Instance.items[slotNumber] = null;
-        InventoryManager.Instance.itemsNames[slotNumber].text = "Empty";
-        InventoryManager.Instance.itemsImages[slotNumber].sprite = null;
-
-        slotItem = null;
-
+        InfiniteInventoryManager.Instance.items.Remove(slotItem);
+        
         CloseWindow();
+
+        Destroy(gameObject);
     }
 }
